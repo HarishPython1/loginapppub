@@ -8,7 +8,6 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-const mongoose = require('mongoose');
 
 // Replace with your MongoDB Atlas connection string
 const mongoURI = 'mongodb+srv://dbUser:securePassword123@cluster0.mongodb.net/loginDB?retryWrites=true&w=majority';
