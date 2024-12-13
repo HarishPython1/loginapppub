@@ -10,7 +10,7 @@ app.use(cors());
 
 
 // Replace with your MongoDB Atlas connection string
-const mongoURI = 'mongodb+srv://dbUser:securePassword123@cluster0.mongodb.net/loginDB?retryWrites=true&w=majority';
+const mongoURI = 'mongodb+srv://Test123:Test123@essen.hpptm.mongodb.net/';
 
 mongoose.connect(mongoURI, {
     useNewUrlParser: true,
