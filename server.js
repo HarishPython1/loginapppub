@@ -8,13 +8,18 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-// MongoDB Connection
-mongoose.connect('mongodb://localhost:27017/login-app', {
+const mongoose = require('mongoose');
+
+// Replace with your MongoDB Atlas connection string
+const mongoURI = 'mongodb+srv://dbUser:securePassword123@cluster0.mongodb.net/loginDB?retryWrites=true&w=majority';
+
+mongoose.connect(mongoURI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
-.then(() => console.log('Connected to MongoDB'))
-.catch(err => console.error('MongoDB connection error:', err));
+.then(() => console.log('Connected to MongoDB Atlas'))
+.catch(err => console.error('Error connecting to MongoDB Atlas:', err));
+
 
 // User Schema
 const userSchema = new mongoose.Schema({
