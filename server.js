@@ -43,6 +43,11 @@ app.post('/login', async (req, res) => {
     }
 });
 
+app.use(cors({
+    origin: 'https://dainty-pothos-290a5f.netlify.app/' // Replace with Netlify URL
+}));
+
+
 // Start the server
 app.listen(3000, () => {
     console.log('Server running on http://localhost:3000');
